@@ -1,6 +1,6 @@
 ----- Search for GitHub profiles -----
 
-- Technologies used: HTML/SASS/JavaScript
+- Technologies used: HTML/SASS/JavaScript, and an GitHub API
 - RUN PROJECT:
 - a) write npm start in terminal
 - b) use live server
