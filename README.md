@@ -1,4 +1,4 @@
-- Search for GitHub profiles
+----- Search for GitHub profiles -----
 
 - Technologies used: HTML/SASS/JavaScript
 - RUN PROJECT:
