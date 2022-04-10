@@ -1,0 +1,33 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*
+    Persian Indigo: hsl(​250.77°, ​52%, ​29.41%)
+  */
+  --first-hue: 250.77;
+  --sat: 70%;
+  --lig: 30%;
+
+  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 50%);
+  --first-color-light: hsl(var(--first-hue), 100%, 60%);
+  --text-color: #fff;
+  // OPACITY
+
+  // BACKGROUND IMAGE
+  --back-img-1: linear-gradient(
+    to right bottom,
+    var(--first-color),
+    var(--first-color-alt)
+  );
+
+  --back-img-2: linear-gradient(
+    to right bottom,
+    var(--first-color-alt),
+    var(--first-color-light)
+  );
+
+  // SHADOW
+  --text-shadow: 0.3rem 0.3rem 0 rgba(0, 0, 0, 0.2);
+  --box-shadow: 0 5px 0.5rem rgba(0, 0, 0, 0.5), 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}

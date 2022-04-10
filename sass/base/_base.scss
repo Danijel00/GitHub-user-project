@@ -1,0 +1,61 @@
+/*=============== BREAKPOINTS ===============*/
+
+$bp-medium: 48em; //768px / 16px = 48em
+$bp-small: 37em; //592px / 16px = 37em
+$bp-smaller: 26.75em; //428px / 16px = 26.75em
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// SCROLLBAR
+::-webkit-scrollbar {
+  width: 1rem;
+  background-color: var(--first-color);
+
+  &-thumb {
+    border-radius: 0.5rem;
+    background-color: var(--first-color);
+    &:hover {
+      background-color: var(--first-color-alt);
+    }
+  }
+}
+
+::selection {
+  background-color: var(--first-color);
+  color: var(--text-color);
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--first-color);
+  background-image: var(--back-img-1);
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}

@@ -1,0 +1,138 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  &-input {
+    background-color: var(--first-color-light);
+    border-radius: 1rem;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--text-color);
+    }
+  }
+}
+
+.main {
+  padding: 0 2rem;
+}
+
+.card {
+  background-color: var(--first-color-alt);
+  background-image: var(--back-img-2);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  max-width: 800px;
+
+  &-img {
+    border: 0.8rem solid var(--first-color);
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+.user {
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-left: 2rem;
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style-type: none;
+    max-width: 25rem;
+
+    &__list {
+      display: flex;
+      align-items: center;
+      column-gap: 0.3rem;
+    }
+  }
+  &-repo {
+    background-color: var(--first-color);
+    display: inline-block;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    border: 1px solid var(--text-color);
+    border-radius: 0.3rem;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: var(--first-color-alt);
+    }
+  }
+}
+
+// RESPONSIVE MEDIA
+
+.main {
+  @media only screen and (max-width: $bp-small) {
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+.form {
+  @media only screen and (max-width: $bp-small) {
+    &-input {
+      width: 15rem;
+      margin-top: 1rem;
+    }
+  }
+}
+.card {
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media only screen and (max-width: $bp-small) {
+    border-radius: 0;
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    padding: 2rem;
+  }
+}
+
+.user {
+  @media only screen and (max-width: $bp-medium) {
+    margin-left: 0;
+    margin-top: 1rem;
+
+    &-info {
+      flex-wrap: wrap;
+      column-gap: 1rem;
+      row-gap: 0.5rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    &-repos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
